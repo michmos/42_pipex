@@ -66,7 +66,7 @@ static void	exec_cmd(int child_i, t_pipe_info *info, char **env)
 		execve(info->cmds[child_i - 1][0], info->cmds[child_i - 1], env);
 	else
 		execve(info->cmds[child_i][0], info->cmds[child_i], env);
-	wait_free_exit(info->cmds, EXIT_FAILURE);
+	wait_free_exit(info->cmds, 127);
 }
 
 static void	close_unused_ends(int child_i, int num_childs, t_pipe_info *info, int read_end)
