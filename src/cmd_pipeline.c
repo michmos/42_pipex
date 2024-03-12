@@ -23,9 +23,9 @@ static void	set_in_out(size_t child_i, size_t num_childs, t_pipe_info *info, int
 	if (child_i == num_childs - 1)
 	{
 		if (info->here_doc)
-			fds[1] = open(info->outfile, O_WRONLY | O_APPEND | O_CREAT, 0664);
+			fds[1] = open(info->outfile, O_WRONLY | O_APPEND | O_CREAT, 0777);
 		else
-			fds[1] = open(info->outfile, O_WRONLY | O_TRUNC | O_CREAT, 0664);
+			fds[1] = open(info->outfile, O_WRONLY | O_TRUNC | O_CREAT, 0777);
 	}
 	else
 	{
