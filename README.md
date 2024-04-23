@@ -17,7 +17,7 @@ Write a C program that recreates the piping functionality of a shell. The follow
 ### Utilization
 
 ```
-git clone git@github.com:michmos/42_pipex.git && cd 42_pipex
+git clone https://github.com/michmos/42_pipex.git && cd 42_pipex
 make
 ```
 
